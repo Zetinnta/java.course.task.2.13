@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -90,16 +90,16 @@ public class DepartmentServiceTest {
     public static Stream<Arguments> maxSalaryWithinDepartmentParams() {
         return Stream.of(
                 Arguments.of(
-                        "1", new Employee("Брюс", "Уиллис", 120000, "1"),
-                        "2", new Employee("Люк", "Скайуокер", 92000, "2"))
+                        "1", new Employee("Sophia", "Prohorova", 48000, "1"),
+                        "2", new Employee("Polina", "Makarova", 56000, "2"))
         );
     }
 
     public static Stream<Arguments> minSalaryWithinDepartmentParams() {
         return Stream.of(
                 Arguments.of(
-                        "1", new Employee("Николас", "Кейдж", 20000, "1"),
-                        "2", new Employee("Лирой", "Дженкинс", 30000, "2"))
+                        "1", new Employee("Egor", "Frolov", 42000, "1"),
+                        "2", new Employee("Alexander", "Belyaev", 46000, "2"))
         );
     }
 
@@ -107,11 +107,9 @@ public class DepartmentServiceTest {
         return Stream.of(
                 Arguments.of(
                         "1", List.of(
-                                new Employee("Николас", "Кейдж", 20000, "1"),
                                 new Employee("Sophia", "Prohorova", 48000, "1"),
                                 new Employee("Egor", "Frolov", 42000, "1")),
                         "2", List.of(
-                                new Employee("Лирой", "Дженкинс", 30000, "2"),
                                 new Employee("Sergey", "Vasilyev", 53000, "2"),
                                 new Employee("Alexander", "Belyaev", 46000, "2"),
                                 new Employee("Polina", "Makarova", 56000, "2")),
